@@ -1,0 +1,17 @@
+<nav>
+  <ul>
+    <li>
+      <!-- [class.activated]="currentUrl == '/' "
+          This code uses scss class 'activated' from within sidebar.component.scss,
+          but only when template expression "currentUrl == '/' " evaluates to TRUE -->
+      <a routerLink="" [class.activated]="currentUrl == '/' ">
+        <i class="material-icons">supervised_user_circle</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="posts" [class.activated]="currentUrl == '/posts' ">
+        <i class="material-icons">message</i>
+      </a>
+    </li>  
+  </ul>
+</nav>>

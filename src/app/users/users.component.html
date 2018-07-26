@@ -1,0 +1,16 @@
+<h1>Users</h1>
+
+<ul [@listStagger]="users$">
+  <!-- ngFor is a directive, due to the * -->
+  <!-- this line will iterate over each user in array users -->
+  <li *ngFor="let user of users$">
+  <!-- user details will then be filled in through use of the double {{}} via interpolation -->
+    <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+
+    <ul>
+      <li>{{ user.email }}</li>
+      <li><a href="http://{{ user.website }}">{{user.website}}</a></li>
+    </ul>
+
+  </li>
+</ul>
